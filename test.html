@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./public/javascripts/jquery-3.6.0.min.js"></script>
+    <script src="./public/javascripts/todolist.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>TodoList</h1>
+        <div class="block1">
+            <div class="addList">
+                Title:
+                <input type="text" id="title" name="title">
+                Content:
+                <input type="text" id="content" name="content">
+            </div>
+            <button onclick="addList()">Submit</button>
+        </div>
+        <div class="block2">
+            <div class="showMyList" id="${todo._id}">
+                <div class="${titleClass}">
+                    <input type="checkbox" onclick="changeStatus('${todo._id}', this)">
+                    <text id="title${todo._id}">${todo.title}</text>
+                    <div class="btnArea">
+                        <button class="editBtn" id="deleteBtn" onclick="removeList('${todo._id}')">Delete</button>
+                        <button class="editBtn" id="edit${todo._id}" style="display: ${editDisplay};" onclick="editList('${todo._id}')">edit</button>
+                        <button class="editBtn" id="update${todo._id}" style="display: none;" onclick="updateList('${todo._id}')">update</button>
+                    </div>
+                    <input>*******Test*******
+                </div>
+                <div class="${contentClass}">
+                    <text id="content${todo._id}">${todo.content}</text>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
