@@ -27,7 +27,7 @@
                     <text id="title${todo._id}">${todo.title}</text>
                     <div class="btnArea">
                         <button class="editBtn" id="deleteBtn" onclick="removeList('${todo._id}')">Delete</button>
-                        <button class="editBtn" id="edit${todo._id}" style="display: ${editDisplay};" onclick="editList('${todo._id}')">edit</button>
+                        <button class="editBtn" id="edit${todo._id}" style=`display: ${editDisplay};` onclick="editList('${todo._id}')">edit</button>
                         <button class="editBtn" id="update${todo._id}" style="display: none;" onclick="updateList('${todo._id}')">update</button>
                     </div>
                     <input>*******Test*******
